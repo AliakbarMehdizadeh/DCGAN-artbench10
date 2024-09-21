@@ -7,11 +7,12 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import torch
 import torch.nn as nn
 import torch.optim as optim
-import torchvision 
+import torchvision
 import torchvision.transforms as transforms
 from torch.utils.data import DataLoader
 from models.generator import Generator
 from models.discriminator import Discriminator
+from artbench10 import ArtBench10
 
 
 def train_dcgan(dataloader, num_epochs, latent_dim, lr, beta1):
@@ -69,7 +70,7 @@ def train_dcgan(dataloader, num_epochs, latent_dim, lr, beta1):
         # Save generated images
         with torch.no_grad():
             fake = netG(fixed_noise).detach().cpu()
-            torchvision.utils.save_image(fake, f'fake_samples_epoch_{epoch}.png', normalize=True)
+            torchvision.utils.save_image(fake, f'results/fake_samples_epoch_{epoch}.png', normalize=True)
 
     return netG, netD
 
@@ -78,7 +79,7 @@ if __name__ == "__main__":
     batch_size = 128
     image_size = 64
     num_epochs = 5
-    lr = 0.0002
+    lr = 0.0001
     beta1 = 0.5
     latent_dim = 100
 
@@ -89,8 +90,11 @@ if __name__ == "__main__":
         transforms.ToTensor(),
         transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
     ])
-
-    dataset = torchvision.datasets.CIFAR10(root='../data', download=True, transform=transform)
+    # CIFAR10
+    #dataset = torchvision.datasets.CIFAR10(root='../data', download=True, transform=transform)
+    # ARTBENCH10
+    dataset = ArtBench10(root='../data', download=True, transform=transform)
+    
     dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True, num_workers=2)
 
     # Train the model
