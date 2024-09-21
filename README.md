@@ -6,7 +6,7 @@ The aim of the project is to experiment with image generation, improving the abi
 
 <p float="left">
   <img src="fake_samples_epoch_47.png" alt="Accuracy Plot" width="500" />
-  <img src="fake_samples_epoch_47.png" alt="ROC Curve" width="500" />
+  <img src="fake_samples_epoch_34.png" alt="ROC Curve" width="500" />
 </p>
 
 
