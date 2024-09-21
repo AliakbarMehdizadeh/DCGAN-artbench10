@@ -1,17 +1,14 @@
-# ArtBench-10 GAN
+# CIFAR10 & ArtBench-10 DCGAN
 
-This project implements a Generative Adversarial Network (GAN) to generate artistic images using the [ArtBench-10](https://artbench.eecs.berkeley.edu) dataset. The dataset consists of 10 categories of artworks, and this project builds on the `torchvision.datasets.CIFAR10` class to create a custom loader for `ArtBench-10`. The aim of the project is to experiment with image generation, improving the ability of GANs to create convincing artistic styles.
+This project implements a DCGANs to generate artistic images using the [ArtBench-10](https://artbench.eecs.berkeley.edu) and [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) datasets. Deep Convolutional Generative Adversarial Networks (DCGANs) are a type of GAN that leverages deep convolutional neural networks for generating high-quality images. They consist of two neural networks: a generator that creates images from random noise and a discriminator that distinguishes between real and generated images. DCGANs improve training stability and image quality by using convolutional layers, batch normalization, and specific architectural choices. 
+
+The aim of the project is to experiment with image generation, improving the ability of GANs to create convincing artistic styles. CIFAR fake images on the left and ARTBENCH fake images on right:
 
 <p float="left">
-  <div style="text-align: center;">
-    <img src="results/epoch_1_sample.png" width="200" />
-    <p>CIFAR 10, EPOCH 45</p>
-  </div>
-  <div style="text-align: center;">
-    <img src="results/epoch_50_sample.png" width="200" />
-    <p>ARTBENCH10, EPOCH 10</p>
-  </div>
+  <img src="fake_samples_epoch_47.png" alt="Accuracy Plot" width="500" />
+  <img src="fake_samples_epoch_47.png" alt="ROC Curve" width="500" />
 </p>
+
 
 ## Project Features
 
@@ -24,8 +21,14 @@ This project implements a Generative Adversarial Network (GAN) to generate artis
 ## Dataset
 
 The [ArtBench-10](https://artbench.eecs.berkeley.edu) dataset contains artwork images across 10 categories:
-- Categories: Baroque, Impressionism, Renaissance, Cubism, Surrealism, etc.
-- The dataset consists of low-resolution 32x32 images similar in structure to CIFAR-10, which makes it compatible with existing deep learning pipelines.
+- **Categories**: Baroque, Impressionism, Renaissance, Cubism, Surrealism, etc.
+- The dataset consists of low-resolution 32x32 images, similar in structure to CIFAR-10, making it compatible with existing deep learning pipelines.
+
+The [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) dataset is a well-known benchmark in the field of machine learning and computer vision:
+- **Categories**: The CIFAR-10 dataset comprises 10 classes, including Airplane, Automobile, Bird, Cat, Deer, Dog, Frog, Horse, Ship, and Truck.
+- The dataset consists of 60,000 color images, each with a resolution of 32x32 pixels, split into 50,000 training images and 10,000 test images.
+- CIFAR-10 is widely used for training and evaluating machine learning models, particularly convolutional neural networks (CNNs), due to its manageable size and well-defined categories.
+
 
 ## Usage
 
