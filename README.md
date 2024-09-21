@@ -5,8 +5,8 @@ This project implements a DCGANs to generate artistic images using the [ArtBench
 The aim of the project is to experiment with image generation, improving the ability of GANs to create convincing artistic styles. `CIFAR` fake images on the left and `ARTBENCH` fake images on right:
 
 <p float="left">
-  <img src="fake_samples_epoch_47.png" alt="Accuracy Plot" width="500" />
-  <img src="fake_samples_epoch_34.png" alt="ROC Curve" width="500" />
+  <img src="fake_samples_epoch_47.png" alt="Accuracy Plot" width="400" />
+  <img src="fake_samples_epoch_34.png" alt="ROC Curve" width="400" />
 </p>
 
 
