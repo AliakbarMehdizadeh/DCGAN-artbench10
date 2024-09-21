@@ -2,16 +2,14 @@
 
 This project implements a Generative Adversarial Network (GAN) to generate artistic images using the [ArtBench-10](https://artbench.eecs.berkeley.edu) dataset. The dataset consists of 10 categories of artworks, and this project builds on the `torchvision.datasets.CIFAR10` class to create a custom loader for `ArtBench-10`. The aim of the project is to experiment with image generation, improving the ability of GANs to create convincing artistic styles.
 
-
-Copy code
 <p float="left">
   <div style="text-align: center;">
     <img src="results/epoch_1_sample.png" width="200" />
-    <p>Epoch 1</p>
+    <p>CIFAR 10, EPOCH 45</p>
   </div>
   <div style="text-align: center;">
     <img src="results/epoch_50_sample.png" width="200" />
-    <p>Epoch 50</p>
+    <p>ARTBENCH10, EPOCH 10</p>
   </div>
 </p>
 
