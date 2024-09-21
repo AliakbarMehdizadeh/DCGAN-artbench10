@@ -2,7 +2,7 @@
 
 This project implements a DCGANs to generate artistic images using the [ArtBench-10](https://artbench.eecs.berkeley.edu) and [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) datasets. Deep Convolutional Generative Adversarial Networks (DCGANs) are a type of GAN that leverages deep convolutional neural networks for generating high-quality images. They consist of two neural networks: a generator that creates images from random noise and a discriminator that distinguishes between real and generated images. DCGANs improve training stability and image quality by using convolutional layers, batch normalization, and specific architectural choices. 
 
-The aim of the project is to experiment with image generation, improving the ability of GANs to create convincing artistic styles. CIFAR fake images on the left and ARTBENCH fake images on right:
+The aim of the project is to experiment with image generation, improving the ability of GANs to create convincing artistic styles. `CIFAR` fake images on the left and `ARTBENCH` fake images on right:
 
 <p float="left">
   <img src="fake_samples_epoch_47.png" alt="Accuracy Plot" width="500" />
